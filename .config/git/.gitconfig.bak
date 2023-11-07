@@ -1,0 +1,30 @@
+[core]
+	excludesfile = /Users/$USER/.gitignore_global
+	autocrlf = input
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[alias]
+    loginfo = log --pretty=format:'%C(auto) %h | %ai | %Cred  %an %Cgreen %s %C(auto) %d' --date=local
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	sw = switch
+	da = checkout release/daily
+	d = checkout release/daily
+	pl = pull
+	ps = push
+	s = checkout
+[user]
+	email = 809261665@qq.com
+	name = $USER
+[commit]
+	template = /Users/$USER/.stCommitMsg

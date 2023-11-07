@@ -1,0 +1,18 @@
+
+# ========================== Alias Start =========================
+# zykj vpn
+alias vpn='cd /usr/local/etc/openvpn && sudo nohup /usr/local/opt/openvpn/sbin/openvpn --config /usr/local/etc/openvpn/config.ovpn'
+alias vpnprod='cd /usr/local/etc/openvpn_prod && sudo nohup /usr/local/opt/openvpn/sbin/openvpn --config /usr/local/etc/openvpn_prod/config.ovpn'
+alias vpnprod2='cd /usr/local/etc/openvpn_prod2 && sudo /usr/local/opt/openvpn/sbin/openvpn --config /usr/local/etc/openvpn_prod2/config.ovpn'
+alias git='LANG=en_GB git'
+alias mvncfg='cd ~ && open -a /Applications/Visual\ Studio\ Code.app .m2/settings.xml'
+# tree
+# alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias ll="ls -latr"
+alias cls="clear"
+alias du="ncdu --color dark"
+# change zsh theme
+alias czt="open -a /Applications/Visual\ Studio\ Code.app .zshrc" 
+# clean maven repo
+alias cmr="find /Users/$USER/.m2/repository/ -name '*.lastUpdated' -exec grep -q 'Could not transfer' {} \; -print -exec rm {} \;"
+
